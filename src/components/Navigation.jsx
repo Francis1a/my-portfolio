@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import TypewriterContainer from "./TypewriterContainer";
 
 function Navigation() {
   return (
     <>
+      <div className="hdr-logo">
+        <TypewriterContainer />
+      </div>
       <nav className="navbar">
-        <ul className="nav-list">
+        <div className="contact">
+          <Link to="#contact">Send me a Letter</Link>
+        </div>
+        {/* <ul className="nav-list">
           <li className="nav-item">
             <Link to="/" className="nav-links">
               Home
@@ -27,7 +34,7 @@ function Navigation() {
               Message Me
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </>
   );
