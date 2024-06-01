@@ -193,11 +193,51 @@ a.nav-links {
   max-width: 100%;
 }
 
+.icon2 {
+  position: absolute;
+  right: 0;
+  width: 70px;
+}
+
 .icon3 {
   width: 340px;
   max-width: 100%;
 }
 
+.icon4 {
+  position: absolute;
+  width: 70px;
+  top: -80px;
+  right: 180px;
+}
+
+.icon5 {
+  width: 80px;
+  position: absolute;
+  top: -140px;
+  left: 112px;
+  right: 0;
+  margin: 0 auto;
+}
+
+.icon6 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 0;
+  right: -530px;
+  top: 40px;
+  margin: 0 auto;
+}
+.icon7 {
+  position: absolute;
+  top: 110px;
+  width: 50px;
+  height: 50px;
+  left: 430px;
+  right: 0;
+  margin: 0 auto;
+}
 
 @keyframes flash {
   0% {

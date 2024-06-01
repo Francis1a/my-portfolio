@@ -1,24 +1,27 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "../App.css";
 import Navigation from "../components/Navigation";
-import gsap from "gsap";
+import gsap, { Linear } from "gsap";
 import "animate.css";
 import { motion } from "framer-motion";
 import MySvg from "../assets/SVG/sample1.svg?react";
 import MySvg1 from "../assets/SVG/Asset8.svg?react";
 import MySvg2 from "../assets/SVG/Asset9.svg?react";
 import MySvg3 from "../assets/SVG/Asset10.svg?react";
-// import MySvg4 from "../assets/SVG/Asset11.svg?react";
-// import MySvg5 from "../assets/SVG/Asset13.svg?react";
-// import MySvg6 from "../assets/SVG/Asset14.svg?react";
-// import MySvg7 from "../assets/SVG/Asset15.svg?react";
-// import MySvg8 from "../assets/SVG/Asset16.svg?react";
-// import MySvg9 from "../assets/SVG/Asset17.svg?react";
-// import MySvg10 from "../assets/SVG/Asset19.svg?react";
-// import MySvg11 from "../assets/SVG/Asset20.svg?react";
+import MySvg4 from "../assets/SVG/Asset11.svg?react";
+import MySvg5 from "../assets/SVG/Asset13.svg?react";
+import MySvg6 from "../assets/SVG/Asset14.svg?react";
+import MySvg7 from "../assets/SVG/Asset15.svg?react";
+import MySvg8 from "../assets/SVG/Asset16.svg?react";
+import MySvg9 from "../assets/SVG/Asset17.svg?react";
+import MySvg10 from "../assets/SVG/Asset19.svg?react";
+import MySvg11 from "../assets/SVG/Asset20.svg?react";
 
 function Home() {
   let trans = useRef(null);
+  let logoRotation = useRef(null);
+  let logoRotation2 = useRef(null);
+
   const [isAnimationClass1, setIsAnimationClass1] = useState(true);
 
   useEffect(() => {
@@ -62,6 +65,22 @@ function Home() {
     return () => ctx.revert();
   }, []);
 
+  // useEffect(() => {
+  //   gsap.to(logoRotation, 5, {
+  //     ease: Linear.easeNone,
+  //     duration: 99999,
+  //     rotation: 360,
+  //     repeat: -1,
+  //   });
+
+  //   gsap.to(logoRotation2, 5, {
+  //     ease: Linear.easeNone,
+  //     duration: 99999,
+  //     rotation: -360,
+  //     repeat: -1,
+  //   });
+  // });
+
   return (
     <>
       <div className="animate" ref={trans}>
@@ -101,25 +120,35 @@ function Home() {
                   >
                     <MySvg1 />
                   </div>
-                  {/* <div className="icon2">
+                  <div className="icon2">
                     <MySvg2 />
-                  </div> */}
+                  </div>
                   <div className="icon3">
                     <MySvg3 />
                   </div>
-                  {/*<div className="icon4">
-                <MySvg4 />
-              </div>
-              <div className="icon5">
-                <MySvg5 />
-              </div>
-              <div className="icon6">
-                <MySvg6 />
-              </div>
-              <div className="icon7">
-                <MySvg7 />
-              </div>
-              <div className="icon8">
+                  <div className="icon4">
+                    <MySvg4 />
+                  </div>
+                  <div className="icon5">
+                    <MySvg5 />
+                  </div>
+                  <div
+                    className="icon6"
+                    ref={(el) => {
+                      logoRotation = el;
+                    }}
+                  >
+                    <MySvg6 />
+                  </div>
+                  <div
+                    className="icon7"
+                    ref={(el) => {
+                      logoRotation2 = el;
+                    }}
+                  >
+                    <MySvg7 />
+                  </div>
+                  {/*<div className="icon8">
                 <MySvg8 />
               </div>
               <div className="icon9">
