@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "../App.css";
 import Navigation from "../components/Navigation";
 import gsap, { Linear } from "gsap";
+import "pagepiling.js";
 import "animate.css";
 import { motion } from "framer-motion";
 import MySvg from "../assets/SVG/sample1.svg?react";
@@ -16,11 +17,53 @@ import MySvg8 from "../assets/SVG/Asset16.svg?react";
 import MySvg9 from "../assets/SVG/Asset17.svg?react";
 import MySvg10 from "../assets/SVG/Asset19.svg?react";
 import MySvg11 from "../assets/SVG/Asset20.svg?react";
+import MySvg12 from "../assets/SVG/Asset22.svg?react";
+import MySvg13 from "../assets/SVG/Asset23.svg?react";
+import ProweaverLogo from "../assets/SVG/proweaver-logo.svg?react";
+import InsysticLogo from "../assets/SVG/INSYSTIC-LOGO.png";
+import HuaweiLogo from "../assets/SVG/huaweiLogo.png";
+import GlobeLogo from "../assets/SVG/globeLogo.png";
+import WorpressLogo from "../assets/SVG/WordpressLogo.png";
+import WooCommerceLogo from "../assets/SVG/WooCommerce.png";
+import ShopifyLogo from "../assets/SVG/Shopify.png";
+import ElementorLogo from "../assets/SVG/ElementorLogo.png";
+import XaraLogo from "../assets/SVG/DiviLogo.png";
 
 function Home() {
   let trans = useRef(null);
   let logoRotation = useRef(null);
   let logoRotation2 = useRef(null);
+
+  const isThrottled = useRef(false);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      if (isThrottled.current) return;
+      let numScroll = event.deltaY;
+      if (numScroll > 0) {
+        scrollToSection(currentSectionIndex + 1);
+      } else {
+        scrollToSection(currentSectionIndex - 1);
+      }
+      isThrottled.current = true;
+      setTimeout(() => (isThrottled.current = false), 1000);
+    };
+    window.addEventListener("wheel", handleScroll);
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  });
+
+  const scrollToSection = (index) => {
+    const sections = ["#div1", "#div2", "#div3"];
+    if (index >= 0 && index <= 2) {
+      setCurrentSectionIndex(index);
+      console.log(index);
+      console.log(sections[index]);
+      window.location.replace(sections[index]);
+    }
+  };
 
   const [isAnimationClass1, setIsAnimationClass1] = useState(true);
 
@@ -65,21 +108,21 @@ function Home() {
     return () => ctx.revert();
   }, []);
 
-  // useEffect(() => {
-  //   gsap.to(logoRotation, 5, {
-  //     ease: Linear.easeNone,
-  //     duration: 99999,
-  //     rotation: 360,
-  //     repeat: -1,
-  //   });
+  useEffect(() => {
+    gsap.to(logoRotation, 5, {
+      ease: Linear.easeNone,
+      duration: 99999,
+      rotation: 360,
+      repeat: -1,
+    });
 
-  //   gsap.to(logoRotation2, 5, {
-  //     ease: Linear.easeNone,
-  //     duration: 99999,
-  //     rotation: -360,
-  //     repeat: -1,
-  //   });
-  // });
+    gsap.to(logoRotation2, 5, {
+      ease: Linear.easeNone,
+      duration: 99999,
+      rotation: -360,
+      repeat: -1,
+    });
+  });
 
   return (
     <>
@@ -101,8 +144,8 @@ function Home() {
         }}
         exit={{ opacity: 0 }}
       >
-        <div className="wrapper">
-          <div className="cover-page">
+        <div id="pagepiling" className="wrapper">
+          <section id="div1" className="cover-page section">
             <div className="navigation">
               <Navigation />
             </div>
@@ -148,18 +191,24 @@ function Home() {
                   >
                     <MySvg7 />
                   </div>
-                  {/*<div className="icon8">
-                <MySvg8 />
-              </div>
-              <div className="icon9">
-                <MySvg9 />
-              </div>
-              <div className="icon10">
-                <MySvg10 />
-              </div>
-              <div className="icon11">
-                <MySvg11 />
-              </div> */}
+                  <div className="icon8">
+                    <MySvg8 />
+                  </div>
+                  <div className="icon9">
+                    <MySvg9 />
+                  </div>
+                  <div className="icon10">
+                    <MySvg10 />
+                  </div>
+                  <div className="icon11">
+                    <MySvg11 />
+                  </div>
+                  <div className="icon12">
+                    <MySvg12 />
+                  </div>
+                  <div className="icon13">
+                    <MySvg13 />
+                  </div>
                 </div>
               </div>
               <div className="bnr-info">
@@ -167,8 +216,156 @@ function Home() {
                 <p className="">Web Developer</p>
               </div>
             </div>
-          </div>
-          <div id="aboutme"></div>
+          </section>
+          <section id="div2" className="section">
+            <div className="tablecell">
+              <div className="container">
+                <div className="workExperience">
+                  <div className="work">
+                    <div className="workContainer">
+                      <figure>
+                        {/* <img src={proweaverLogo} alt="Proweaver Logo" /> */}
+                        <ProweaverLogo />
+                      </figure>
+                      <h2 className="textHeader ubuntu">
+                        Web Developer (<i>Team Leader</i>)
+                      </h2>
+                      <h3 className="company">
+                        <i>Proweaver, Inc.: Cebu Business Park, Cebu City</i>
+                      </h3>
+                      <p className="date">April 2022 – January 2024</p>
+                      <div className="webtechnology">
+                        <section>
+                          <figure>
+                            <img src={WorpressLogo} alt="Huawei Logo" />
+                          </figure>
+                        </section>
+                        <section>
+                          <figure>
+                            <img src={WooCommerceLogo} alt="Huawei Logo" />
+                          </figure>
+                        </section>
+                        <section>
+                          <figure>
+                            <img src={ShopifyLogo} alt="Huawei Logo" />
+                          </figure>
+                        </section>
+                        <section>
+                          <figure>
+                            <img src={ElementorLogo} alt="Huawei Logo" />
+                          </figure>
+                        </section>
+                        <section>
+                          <figure>
+                            <img src={XaraLogo} alt="Huawei Logo" />
+                          </figure>
+                        </section>
+                      </div>
+                    </div>
+                    <div className="workContainer">
+                      <ul className="responsibilities">
+                        <li>
+                          Skilled with WordPress as a CMS, experienced in all
+                          development aspects, such as installation, theme and
+                          plugin management, custom feature development,
+                          performance and security optimization, and website
+                          maintenance and troubleshooting.
+                        </li>
+                        <li>
+                          Design a captivating landing page that effectively
+                          tells your brand&apos;s story, using the expertly
+                          crafted design by our talented web designer.
+                        </li>
+                        <li>
+                          Create a strong and efficient backend system for
+                          smooth email delivery, guaranteeing messages are sent
+                          to recipients quickly and dependably
+                        </li>
+                        <li>
+                          Use WooCommerce plugins to provide unique and tailored
+                          solutions for your online store, improving customer
+                          shopping experiences based on your business
+                          requirements.
+                        </li>
+                        <li>
+                          Performed quality assurance tests on various sites to
+                          ensure cross browser compatibility and mobile
+                          responsiveness.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="work">
+                    <div className="workContainer">
+                      <figure className="insysticLogo">
+                        <img src={InsysticLogo} alt="Insystic Logo" />
+                      </figure>
+                      <h2 className="textHeader ubuntu">
+                        Commissioning Engineer (<i>Team Leader</i>)
+                      </h2>
+                      <h3 className="company">
+                        <i>Insystic Corporation: Tipolo Mandaue City</i>
+                      </h3>
+                      <p className="date">March 2021 – January 2022</p>
+                      <div className="technologies">
+                        <section>
+                          <figure>
+                            <img src={HuaweiLogo} alt="Huawei Logo" />
+                          </figure>
+                        </section>
+                        <section>
+                          <figure>
+                            <img src={GlobeLogo} alt="Huawei Logo" />
+                          </figure>
+                        </section>
+                      </div>
+                    </div>
+                    <div className="workContainer">
+                      <ul className="responsibilities">
+                        <li>
+                          Efficiently install hardware and software components
+                          for equipment such as ATN 980C, ATN910C, MA5800, and
+                          GPONA devices, ensuring smooth integration into your
+                          network and optimal performance across operations.
+                        </li>
+                        <li>
+                          Thoroughly install and set up the network, including
+                          hardware and software, to create a reliable
+                          infrastructure. Configure settings, protocols,
+                          security, and access controls for smooth data
+                          transmission, connectivity, and management.
+                        </li>
+                        <li>
+                          Follow industry standards and best practices during
+                          installation and configuration to create a stable,
+                          high-performance network that meets your
+                          organization&apos;s needs.
+                        </li>
+                        <li>
+                          Performed thorough inspections on structures,
+                          evaluating their condition and compliance. Skilled in
+                          conducting surveys, defect analysis, energy efficiency
+                          assessments, and accessibility evaluations. Also adept
+                          at accurately measuring and mapping land for
+                          construction projects and property boundaries
+                        </li>
+                        <li>
+                          Carefully planned and executed logistics strategies to
+                          boost efficiency and reduce downtime. This included
+                          assessing equipment needs, coordinating schedules with
+                          stakeholders, and setting up inventory systems. I also
+                          worked closely with the installation team to ensure
+                          smooth coordination between equipment and project
+                          timelines.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="div3" className="section"></section>
         </div>
       </motion.div>
     </>
@@ -176,3 +373,30 @@ function Home() {
 }
 
 export default Home;
+
+// Html
+// css
+// Javascript
+// jqeury
+// phpmyadmin
+// php
+// Git
+// Github
+// node.js
+// WordpPress
+// WooCommerce
+// Shopify
+// Xara
+// Wordpress
+// Divi
+// Elementor
+// Photoshop
+// Illutrator
+// Lightroom
+// npm
+// cPanel
+// Tailwind
+// React
+// Laravel
+// python
+// C++

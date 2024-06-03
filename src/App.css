@@ -8,6 +8,41 @@
   font-family: "Ubuntu Sans Mono", monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background:
+        radial-gradient(ellipse at center, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0) 70%),
+        /* niebieski */
+        radial-gradient(ellipse at center, rgba(255, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 70%),
+        /*czerwony */
+        radial-gradient(ellipse at center, rgba(0, 255, 0, 0.3) 0%, rgba(0, 0, 0, 0) 70%)
+        /*zielony */
+        #242324;
+      background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat;
+      background-size:
+        900px 900px,
+        900px 900px,
+        900px 900px;
+      background-attachment: fixed;
+    
+      animation: bganimation 30s infinite;
+      overflow-y: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+figure{
+  margin: 0;
+}
 #root {
   width: 100%;
   margin: 0 auto;
@@ -195,10 +230,10 @@ a.nav-links {
 
 .icon2 {
   position: absolute;
-  right: 0;
-  width: 70px;
+  right: 50px;
+  width: 90px;
+  top: 105px;
 }
-
 .icon3 {
   width: 340px;
   max-width: 100%;
@@ -207,8 +242,8 @@ a.nav-links {
 .icon4 {
   position: absolute;
   width: 70px;
-  top: -80px;
-  right: 180px;
+  top: -10px;
+  right: 520px;
 }
 
 .icon5 {
@@ -239,6 +274,169 @@ a.nav-links {
   margin: 0 auto;
 }
 
+.icon8 {
+  position: absolute;
+  width: 120px;
+  top: 100px;
+  left: -10px;
+  right: 0;
+  margin: 0 auto;
+  z-index: 0;
+}
+svg#Layer_1 {
+  z-index: 2;
+  position: relative;
+}
+.icon9 {
+  position: absolute;
+  top: -30px;
+  left: 365px;
+  right: 0px;
+  margin: 0 auto;
+  width: 80px;
+}
+
+
+.icon10 {
+  position: absolute;
+  left: 342px;
+  right: 0;
+  top: 100px;
+  margin: 0 auto;
+  width: 40px;
+}
+
+
+.icon11 {
+  position: absolute;
+  right: 0px;
+  top: 200px;
+  margin: 0 auto;
+  width: 60px;
+}
+
+
+.icon12 {
+  position: absolute;
+  top: -134px;
+  left: -38px;
+  right: 0;
+  margin: 0 auto;
+  width: 80px;
+  transform: rotate(-10deg);
+}
+
+.icon13 {
+  position: absolute;
+  top: -134px;
+  left: 262px;
+  right: 0;
+  margin: 0 auto;
+  width: 80px;
+  transform: rotate(10deg);
+}
+
+#div2{
+  height: 100vh;
+  width: 100%;
+}
+#div3{
+  height: 100vh;
+  width: 100%;
+}
+
+
+.tablecell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100dvh;
+}
+
+.container {
+  width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 101;
+  max-width: 100%;
+}
+.work {
+  text-align: left;
+  padding: 40px 20px 20px;
+  background: #ffffff33;
+  border-radius: 20px;
+  backdrop-filter: blur(90px);
+  border: 3px solid #ffffff0f;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.textHeader{
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.paraText{
+  font-size: 1rem;
+}
+p.date {
+  color: #ffffff7a;
+}
+h3.company {
+  margin: 0;
+  font-weight: 400;
+  color: #ffffff7a;
+}
+ul.responsibilities{
+      width: 870px;
+}
+ul.responsibilities li {
+  font-size: 1rem;
+  color: #ffffffc2;
+}
+
+.work div:nth-child(1) {
+  width: 850px;
+}
+
+.workContainer > figure {
+  padding: 15px;
+  width: 195px;
+  background: #353f72a6;
+  border-radius: 20px;
+  display: flex;
+  margin: 0 auto 11px;
+  overflow: hidden;
+}
+
+ .technologies {
+   display: flex;
+   width: 124px;
+   padding: 10px;
+   border-radius: 10px;
+   gap: 13px;
+ }
+
+.insysticLogo {
+  background: #fff !important;
+  padding: 5px !important;
+  width: 215px !important;
+}
+
+.webtechnology section figure img {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.webtechnology{
+  display: flex;
+  width: 124px;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 13px;
+}
 @keyframes flash {
   0% {
     opacity: 1;
@@ -247,4 +445,44 @@ a.nav-links {
     100%{
     opacity: 0;
     }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bganimation {
+  0% {
+    background-position:
+      -100% -100%,
+      200% 200%,
+      -100% 200%,
+      200% -100%;
+  }
+
+  50% {
+    background-position:
+      150% 100%,
+      -200% 100%,
+      100% 0%,
+      0% 100%;
+  }
+
+  100% {
+    background-position:
+      -100% -100%,
+      200% 200%,
+      -100% 200%,
+      200% -100%;
+  }
 }
