@@ -69,8 +69,6 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation } from "swiper/modules";
 import TypeWritereffect from "../components/TypeWritereffect";
-import ThreeGlobe from "three-globe";
-import GlobeComponent from "../components/GlobeComponent";
 
 function Home() {
   let trans = useRef(null);
@@ -189,7 +187,7 @@ function Home() {
         exit={{ opacity: 0 }}
       >
         <div className="wrapper">
-          <section id="div1" className="cover-page section">
+          <div id="div1" className="cover-page section">
             <div className="navigation">
               <Nav />
             </div>
@@ -260,8 +258,8 @@ function Home() {
                 <p className="">Web Developer</p>
               </div>
             </div>
-          </section>
-          <section id="div2" className="section">
+          </div>
+          <div id="div2" className="section">
             <div className="tablecell">
               <div className="container">
                 <div className="title">
@@ -376,8 +374,8 @@ function Home() {
                 </div>
               </div>
             </div>
-          </section>
-          <section id="div3" className="section">
+          </div>
+          <div id="div3" className="section">
             <div className="tablecell">
               <div className="container">
                 <div className="title">
@@ -579,7 +577,7 @@ function Home() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
           <div id="div4" className="section">
             <div className="tablecell">
               <div className="container">
@@ -607,11 +605,37 @@ function Home() {
                   />
                 </div>
                 <div className="contents">
-                  <div className="globe">
-                    <GlobeComponent />
-                  </div>
+                  <div className="globe"></div>
                   <div className="testContents">
-                    <p>Interesting</p>
+                    <section>
+                      <p>
+                        <a
+                          href="mailto:fclaquio@gmail.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          fclaquio@gmail.com
+                        </a>
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.linkedin.com/in/francis-cristopher-l-11b482203/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          in/francis-cristopher
+                        </a>
+                      </p>
+                      <p>
+                        <a
+                          href="https://github.com/Francis1a"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          github.com/Francis1a
+                        </a>
+                      </p>
+                    </section>
                   </div>
                 </div>
               </div>

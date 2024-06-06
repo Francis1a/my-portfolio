@@ -402,11 +402,23 @@ h3.company a{
   color: #ffffff7a;
 }
 ul.responsibilities{
-      width: 870px;
+      width: 800px;
 }
 ul.responsibilities li {
   font-size: 1rem;
   color: #ffffffc2;
+}
+.technologies section:nth-child(1) figure img {
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+      margin: 0 auto;
+}
+.technologies section:nth-child(2) figure img {
+  width: 63px;
+  height: 31px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .work div:nth-child(1) {
@@ -428,7 +440,7 @@ ul.responsibilities li {
    width: 124px;
    padding: 10px;
    border-radius: 10px;
-   gap: 13px;
+   gap: 0;
  }
 
 .insysticLogo {
