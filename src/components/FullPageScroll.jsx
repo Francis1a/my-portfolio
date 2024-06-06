@@ -1,46 +1,38 @@
-import React, { useRef, useEffect } from "react";
-import $ from "jquery";
-import "../FullPageScroll.css"; // Import your CSS file for styling
+import React, { useEffect, useState } from "react";
+import "../FullPageScroll.css";
 
-const FullPage = ({ children }) => {
+const FullPageScroll = ({ children }) => {
+  const [currentSection, setCurrentSection] = useState(0);
+  const totalSections = React.Children.count(children);
+
   useEffect(() => {
-    $("#pagepiling").pagepiling({
-      direction: "vertical",
-      menu: null,
-      verticalCentered: true,
-      sectionsColor: [],
-      anchors: [],
-      scrollingSpeed: 700,
-      easing: "swing",
-      loopBottom: false,
-      loopTop: false,
-      css3: true,
-      navigation: {
-        textColor: "#000",
-        bulletsColor: "#000",
-        position: "right",
-        tooltips: [],
-      },
-      normalScrollElements: null,
-      normalScrollElementTouchThreshold: 5,
-      touchSensitivity: 5,
-      keyboardScrolling: true,
-      sectionSelector: ".section",
-      animateAnchor: false,
+    const handleScroll = (event) => {
+      if (event.deltaY > 0) {
+        // Scrolling down
+        setCurrentSection((prevSection) =>
+          Math.min(prevSection + 1, totalSections - 1)
+        );
+      } else {
+        // Scrolling up
+        setCurrentSection((prevSection) => Math.max(prevSection - 1, 0));
+      }
+    };
 
-      //events
-      afterLoad: function (anchorLink, index) {},
-      onLeave: function (index, nextIndex, direction) {},
-    });
-  }, []);
+    window.addEventListener("wheel", handleScroll);
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  }, [totalSections]);
 
   return (
-    <>
-      <div id="pagepiling" className="fullpage-container">
-        {child}
-      </div>
-    </>
+    <div
+      className="fullpage-container"
+      style={{ transform: `translateY(-${currentSection * 100}dvh)` }}
+    >
+      {children}
+    </div>
   );
 };
 
-export default FullPage;
+export default FullPageScroll;

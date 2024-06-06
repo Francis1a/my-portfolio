@@ -36,12 +36,18 @@ body{
 
 img {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   display: block;
 }
 
 figure{
   margin: 0;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 #root {
   width: 100%;
@@ -354,12 +360,11 @@ svg#Layer_1 {
 }
 
 .container {
-  width: 1320px;
-  padding: 0 15px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 101;
-  max-width: 100%;
+  max-width: 1320px;
 }
 .work {
   text-align: left;
@@ -370,7 +375,12 @@ svg#Layer_1 {
   border: 3px solid #ffffff0f;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  width: 1160px;
+  margin: 0 auto 20px;
+  place-items: center;
+  min-height: 360px;
+  backdrop-filter: drop-shadow(2px 4px 6px black);
+  box-shadow: 6px 8px 20px -5px #0000008c;
 }
 .textHeader{
   font-size: 1.5rem;
@@ -386,6 +396,9 @@ p.date {
 h3.company {
   margin: 0;
   font-weight: 400;
+  color: #ffffff7a;
+}
+h3.company a{
   color: #ffffff7a;
 }
 ul.responsibilities{
@@ -425,9 +438,9 @@ ul.responsibilities li {
 }
 
 .webtechnology section figure img {
-  width: 40px;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
+  width: 40px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: contain !important;
 }
 
 .webtechnology{
@@ -437,6 +450,67 @@ ul.responsibilities li {
   border-radius: 10px;
   gap: 13px;
 }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1210px;
+}
+.skillSvg {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  vertical-align: middle;
+  display: flex;
+  place-items: center;
+  padding: 15px;
+  background: #ffffff66;
+  border-radius: 20px;
+  backdrop-filter: drop-shadow(2px 4px 6px black);
+  box-shadow: 6px 8px 20px -5px #0000008c;
+  border: 1.5px solid #ffffff2e;
+}
+
+.title {
+  width: 590px;
+  text-align: left;
+  position: absolute;
+  top: -100px;
+  left: 75px;
+  font-size: 25px;
+}
+section#div2 section p {
+  margin: 0;
+  color: #ffffffad;
+  font-size: 1rem;
+}
+section#div2 section i {
+  color: #fff;
+}
+section#div2 section {
+  width: 100%;
+  margin: 5px auto 30px;
+  max-width: 750px;
+}
+
+section#div3 section p {
+  margin: 0;
+  color: #ffffffad;
+  font-size: 1rem;
+}
+
+section#div3 section i {
+  color: #fff;
+}
+
+section#div3 section {
+  width: 100%;
+  margin: 5px auto 30px;
+  max-width: 750px;
+}
+
 @keyframes flash {
   0% {
     opacity: 1;

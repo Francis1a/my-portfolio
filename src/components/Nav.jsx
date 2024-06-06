@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import TypewriterContainer from "./TypewriterContainer";
+import TypeWritereffect from "./TypeWritereffect";
 
-function Navigation() {
+function Nav() {
   return (
     <>
       <div className="hdr-logo">
-        <TypewriterContainer />
+        <TypeWritereffect
+          datatype={[
+            "Hi! Im Francis",
+            "I am Creative",
+            "I Love Design",
+            "I Love to Develop",
+          ]}
+        />
       </div>
       <nav className="navbar">
         <div className="contact">
@@ -40,4 +47,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Nav;
