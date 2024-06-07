@@ -57,6 +57,9 @@ import Svg26 from "../assets/SVG/ElementorLogo.png";
 import Svg27 from "../assets/SVG/Shopify.png";
 import Svg28 from "../assets/SVG/xaraLogo.png";
 import Svg29 from "../assets/SVG/WooCommerce.png";
+import img1 from "../assets/email.png";
+import img2 from "../assets/linkedin.png";
+import img3 from "../assets/github.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -186,455 +189,525 @@ function Home() {
         }}
         exit={{ opacity: 0 }}
       >
-        <div className="wrapper">
-          <div id="div1" className="cover-page section">
+        <div id="div1" className="cover-page section">
+          <div className="wrapper">
             <div className="navigation">
               <Nav />
             </div>
-            <div className="banner-home">
-              <div className="bannerSvg">
-                <MySvg />
-                <div className="movIcon">
-                  <div
-                    // className="icon1 animate__animated animate__fadeInRight animate__delay-3s "
-                    className={`icon1 animate__animated ${
-                      isAnimationClass1
-                        ? "animate__zoomInRight animate__delay-5s animate__slow"
-                        : "animate__swing animate__infinite animate__slow"
-                    }`}
-                  >
-                    <MySvg1 />
-                  </div>
-                  <div className="icon2">
-                    <MySvg2 />
-                  </div>
-                  <div className="icon3">
-                    <MySvg3 />
-                  </div>
-                  <div className="icon4">
-                    <MySvg4 />
-                  </div>
-                  <div className="icon5">
-                    <MySvg5 />
-                  </div>
-                  <div
-                    className="icon6"
-                    ref={(el) => {
-                      logoRotation = el;
-                    }}
-                  >
-                    <MySvg6 />
-                  </div>
-                  <div
-                    className="icon7"
-                    ref={(el) => {
-                      logoRotation2 = el;
-                    }}
-                  >
-                    <MySvg7 />
-                  </div>
-                  <div className="icon8">
-                    <MySvg8 />
-                  </div>
-                  <div className="icon9">
-                    <MySvg9 />
-                  </div>
-                  <div className="icon10">
-                    <MySvg10 />
-                  </div>
-                  <div className="icon11">
-                    <MySvg11 />
-                  </div>
-                  <div className="icon12">
-                    <MySvg12 />
-                  </div>
-                  <div className="icon13">
-                    <MySvg13 />
-                  </div>
-                </div>
-              </div>
-              <div className="bnr-info">
-                <h2 className="ubuntu">Hi! I am Francis Cristopher</h2>
-                <p className="">Web Developer</p>
-              </div>
-            </div>
           </div>
-          <div id="div2" className="section">
-            <div className="tablecell">
-              <div className="container">
-                <div className="title">
-                  <TypeWritereffect
-                    datatype={[
-                      "Skills and Technologies...",
-                      "Skills and Technologies...",
-                      "Skills and Technologies...",
-                    ]}
-                  />
+          <div className="banner-home">
+            <div className="bannerSvg">
+              <MySvg />
+              <div className="movIcon">
+                <div
+                  // className="icon1 animate__animated animate__fadeInRight animate__delay-3s "
+                  className={`icon1 animate__animated ${
+                    isAnimationClass1
+                      ? "animate__zoomInRight animate__delay-5s animate__slow"
+                      : "animate__swing animate__infinite animate__slow"
+                  }`}
+                >
+                  <MySvg1 />
                 </div>
-                <section>
-                  <i>A PROBLEM IS A CHANCE FOR YOU TO DO YOUR BEST.</i>
-                  <p>
-                    The main area of expertise is front end development (client
-                    side of the web).
-                  </p>
-                  <p>
-                    Proficient in HTML, CSS, and JavaScript, I build website
-                    with WordPress, create custom plugins and animations, and
-                    code interactive layouts.
-                  </p>
-                </section>
-                <div className="skills">
-                  <div className="skillSvg">
-                    <Svg1 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg2 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg3 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg13 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg14 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg15 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg4 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg5 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg6 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg7 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg8 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg9 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg10 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg11 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg12 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg16 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg17 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg18 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg19 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg20 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg21 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg22 />
-                  </div>
-                  <div className="skillSvg">
-                    <Svg23 />
-                  </div>
-                  <div className="skillSvg">
-                    <img src={Svg24} alt="" />
-                  </div>
-                  <div className="skillSvg">
-                    <img src={Svg25} alt="" />
-                  </div>
-                  <div className="skillSvg">
-                    <img src={Svg26} alt="" />
-                  </div>
-                  <div className="skillSvg">
-                    <img src={Svg27} alt="" />
-                  </div>
-                  <div className="skillSvg">
-                    <img src={Svg28} alt="" />
-                  </div>
-                  <div className="skillSvg">
-                    <img src={Svg29} alt="" />
-                  </div>
+                <div className="icon2">
+                  <MySvg2 />
+                </div>
+                <div className="icon3">
+                  <MySvg3 />
+                </div>
+                <div className="icon4">
+                  <MySvg4 />
+                </div>
+                <div className="icon5">
+                  <MySvg5 />
+                </div>
+                <div
+                  className="icon6"
+                  ref={(el) => {
+                    logoRotation = el;
+                  }}
+                >
+                  <MySvg6 />
+                </div>
+                <div
+                  className="icon7"
+                  ref={(el) => {
+                    logoRotation2 = el;
+                  }}
+                >
+                  <MySvg7 />
+                </div>
+                <div className="icon8">
+                  <MySvg8 />
+                </div>
+                <div className="icon9">
+                  <MySvg9 />
+                </div>
+                <div className="icon10">
+                  <MySvg10 />
+                </div>
+                <div className="icon11">
+                  <MySvg11 />
+                </div>
+                <div className="icon12">
+                  <MySvg12 />
+                </div>
+                <div className="icon13">
+                  <MySvg13 />
                 </div>
               </div>
             </div>
+            <div className="bnr-info">
+              <h2 className="ubuntu">Hi! I am Francis Cristopher</h2>
+              <p className="">Web Developer based in Philippines</p>
+            </div>
           </div>
-          <div id="div3" className="section">
-            <div className="tablecell">
-              <div className="container">
-                <div className="title">
-                  <TypeWritereffect
-                    datatype={[
-                      "Experiences...",
-                      "Experiences...",
-                      "Experiences...",
-                    ]}
-                  />
+        </div>
+        <div id="div2" className="section">
+          <div className="bgText">
+            <h2 className="anton">
+              <span>S</span>kills
+            </h2>
+          </div>
+          <div className="tablecell">
+            <div className="container">
+              <div className="title">
+                <TypeWritereffect
+                  datatype={[
+                    "Skills and Technologies...",
+                    "Skills and Technologies...",
+                    "Skills and Technologies...",
+                  ]}
+                />
+              </div>
+              <section>
+                <i>A PROBLEM IS A CHANCE FOR YOU TO DO YOUR BEST.</i>
+                <p>
+                  The main area of expertise is front end development (client
+                  side of the web).
+                </p>
+                <p>
+                  Proficient in HTML, CSS, and JavaScript, I build website with
+                  WordPress, create custom plugins and animations, and code
+                  interactive layouts.
+                </p>
+              </section>
+              <div className="skills">
+                <div className="skillSvg">
+                  <Svg1 />
                 </div>
-                <section>
-                  <i>
-                    ANYONE WHO HAS NEVER MADE A MISTAKE HAS NEVER TRIED
-                    EVERYTHING NEW. <small>~Albert Einstien</small>
-                  </i>
-                  <p>
-                    This are my past experiences working in the corporate world.
-                  </p>
-                </section>
-                <div className="workExperience">
-                  <Swiper
-                    spaceBetween={30}
-                    slidesPerView={"auto"}
-                    centeredSlides={true}
-                    navigation={true}
-                    modules={[Navigation]}
-                    className="mySwiper"
-                  >
-                    <SwiperSlide>
-                      <div className="work">
-                        <div className="workContainer">
-                          <figure>
-                            {/* <img src={proweaverLogo} alt="Proweaver Logo" /> */}
-                            <a
-                              href="https://www.proweaver.com/"
-                              target="_blank"
-                            >
-                              <ProweaverLogo />
-                            </a>
-                          </figure>
-                          <h2 className="textHeader ubuntu">
-                            Web Developer (<i>Team Leader</i>)
-                          </h2>
-                          <a
-                            href="https://www.proweaver.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            https://www.proweaver.com/
+                <div className="skillSvg">
+                  <Svg2 />
+                </div>
+                <div className="skillSvg">
+                  <Svg3 />
+                </div>
+                <div className="skillSvg">
+                  <Svg13 />
+                </div>
+                <div className="skillSvg">
+                  <Svg14 />
+                </div>
+                <div className="skillSvg">
+                  <Svg15 />
+                </div>
+                <div className="skillSvg">
+                  <Svg4 />
+                </div>
+                <div className="skillSvg">
+                  <Svg5 />
+                </div>
+                <div className="skillSvg">
+                  <Svg6 />
+                </div>
+                <div className="skillSvg">
+                  <Svg7 />
+                </div>
+                <div className="skillSvg">
+                  <Svg8 />
+                </div>
+                <div className="skillSvg">
+                  <Svg9 />
+                </div>
+                <div className="skillSvg">
+                  <Svg10 />
+                </div>
+                <div className="skillSvg">
+                  <Svg11 />
+                </div>
+                <div className="skillSvg">
+                  <Svg12 />
+                </div>
+                <div className="skillSvg">
+                  <Svg16 />
+                </div>
+                <div className="skillSvg">
+                  <Svg17 />
+                </div>
+                <div className="skillSvg">
+                  <Svg18 />
+                </div>
+                <div className="skillSvg">
+                  <Svg19 />
+                </div>
+                <div className="skillSvg">
+                  <Svg20 />
+                </div>
+                <div className="skillSvg">
+                  <Svg21 />
+                </div>
+                <div className="skillSvg">
+                  <Svg22 />
+                </div>
+                <div className="skillSvg">
+                  <Svg23 />
+                </div>
+                <div className="skillSvg">
+                  <img src={Svg24} alt="" />
+                </div>
+                <div className="skillSvg">
+                  <img src={Svg25} alt="" />
+                </div>
+                <div className="skillSvg">
+                  <img src={Svg26} alt="" />
+                </div>
+                <div className="skillSvg">
+                  <img src={Svg27} alt="" />
+                </div>
+                <div className="skillSvg">
+                  <img src={Svg28} alt="" />
+                </div>
+                <div className="skillSvg">
+                  <img src={Svg29} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="div3" className="section">
+          <div className="bgText">
+            <h2 className="anton">
+              <span>E</span>xperiences
+            </h2>
+          </div>
+          <div className="tablecell">
+            <div className="container">
+              <div className="title">
+                <TypeWritereffect
+                  datatype={[
+                    "Experiences...",
+                    "Experiences...",
+                    "Experiences...",
+                  ]}
+                />
+              </div>
+              <section>
+                <i>
+                  ANYONE WHO HAS NEVER MADE A MISTAKE HAS NEVER TRIED EVERYTHING
+                  NEW. <small>~Albert Einstien</small>
+                </i>
+                <p>
+                  This are my past experiences working in the corporate world.
+                </p>
+              </section>
+              <div className="workExperience">
+                <Swiper
+                  spaceBetween={30}
+                  slidesPerView={"auto"}
+                  centeredSlides={true}
+                  navigation={true}
+                  modules={[Navigation]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide>
+                    <div className="work">
+                      <div className="workContainer">
+                        <figure>
+                          {/* <img src={proweaverLogo} alt="Proweaver Logo" /> */}
+                          <a href="https://www.proweaver.com/" target="_blank">
+                            <ProweaverLogo />
                           </a>
-                          <h3 className="company">
-                            <a
-                              href="https://www.proweaver.com/"
-                              target="_blank"
-                            >
-                              <i>
-                                Proweaver, Inc.: Cebu Business Park, Cebu City
-                              </i>
-                            </a>
-                          </h3>
-                          <p className="date">April 2022 – January 2024</p>
-                          <div className="webtechnology">
-                            <section>
-                              <figure>
-                                <img src={WorpressLogo} alt="Huawei Logo" />
-                              </figure>
-                            </section>
-                            <section>
-                              <figure>
-                                <img src={WooCommerceLogo} alt="Huawei Logo" />
-                              </figure>
-                            </section>
-                            <section>
-                              <figure>
-                                <img src={ShopifyLogo} alt="Huawei Logo" />
-                              </figure>
-                            </section>
-                            <section>
-                              <figure>
-                                <img src={ElementorLogo} alt="Huawei Logo" />
-                              </figure>
-                            </section>
-                            <section>
-                              <figure>
-                                <img src={XaraLogo} alt="Huawei Logo" />
-                              </figure>
-                            </section>
-                          </div>
-                        </div>
-                        <div className="workContainer">
-                          <ul className="responsibilities">
-                            <li>
-                              Skilled with WordPress as a CMS, experienced in
-                              all development aspects, such as installation,
-                              theme and plugin management, custom feature
-                              development, performance and security
-                              optimization, and website maintenance and
-                              troubleshooting.
-                            </li>
-                            <li>
-                              Design a captivating landing page that effectively
-                              tells your brand&apos;s story, using the expertly
-                              crafted design by our talented web designer.
-                            </li>
-                            <li>
-                              Create a strong and efficient backend system for
-                              smooth email delivery, guaranteeing messages are
-                              sent to recipients quickly and dependably
-                            </li>
-                            <li>
-                              Use WooCommerce plugins to provide unique and
-                              tailored solutions for your online store,
-                              improving customer shopping experiences based on
-                              your business requirements.
-                            </li>
-                            <li>
-                              Performed quality assurance tests on various sites
-                              to ensure cross browser compatibility and mobile
-                              responsiveness.
-                            </li>
-                          </ul>
+                        </figure>
+                        <h2 className="textHeader ubuntu">
+                          Web Developer (<i>Team Leader</i>)
+                        </h2>
+                        <a
+                          href="https://www.proweaver.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          https://www.proweaver.com/
+                        </a>
+                        <h3 className="company">
+                          <a href="https://www.proweaver.com/" target="_blank">
+                            <i>
+                              Proweaver, Inc.: Cebu Business Park, Cebu City
+                            </i>
+                          </a>
+                        </h3>
+                        <p className="date">April 2022 – January 2024</p>
+                        <div className="webtechnology">
+                          <section>
+                            <figure>
+                              <img src={WorpressLogo} alt="Huawei Logo" />
+                            </figure>
+                          </section>
+                          <section>
+                            <figure>
+                              <img src={WooCommerceLogo} alt="Huawei Logo" />
+                            </figure>
+                          </section>
+                          <section>
+                            <figure>
+                              <img src={ShopifyLogo} alt="Huawei Logo" />
+                            </figure>
+                          </section>
+                          <section>
+                            <figure>
+                              <img src={ElementorLogo} alt="Huawei Logo" />
+                            </figure>
+                          </section>
+                          <section>
+                            <figure>
+                              <img src={XaraLogo} alt="Huawei Logo" />
+                            </figure>
+                          </section>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="work">
-                        <div className="workContainer">
-                          <figure className="insysticLogo">
-                            <img src={InsysticLogo} alt="Insystic Logo" />
-                          </figure>
-                          <h2 className="textHeader ubuntu">
-                            Commissioning Engineer (<i>Team Leader</i>)
-                          </h2>
-                          <h3 className="company">
-                            <i>Insystic Corporation: Tipolo Mandaue City</i>
-                          </h3>
-                          <p className="date">March 2021 – January 2022</p>
-                          <div className="technologies">
-                            <section>
-                              <figure>
-                                <img src={HuaweiLogo} alt="Huawei Logo" />
-                              </figure>
-                            </section>
-                            <section>
-                              <figure>
-                                <img src={GlobeLogo} alt="Huawei Logo" />
-                              </figure>
-                            </section>
-                          </div>
-                        </div>
-                        <div className="workContainer">
-                          <ul className="responsibilities">
-                            <li>
-                              Efficiently install hardware and software
-                              components for equipment such as ATN 980C,
-                              ATN910C, MA5800, and GPONA devices, ensuring
-                              smooth integration into your network and optimal
-                              performance across operations.
-                            </li>
-                            <li>
-                              Thoroughly install and set up the network,
-                              including hardware and software, to create a
-                              reliable infrastructure. Configure settings,
-                              protocols, security, and access controls for
-                              smooth data transmission, connectivity, and
-                              management.
-                            </li>
-                            <li>
-                              Follow industry standards and best practices
-                              during installation and configuration to create a
-                              stable, high-performance network that meets your
-                              organization&apos;s needs.
-                            </li>
-                            <li>
-                              Performed thorough inspections on structures,
-                              evaluating their condition and compliance. Skilled
-                              in conducting surveys, defect analysis, energy
-                              efficiency assessments, and accessibility
-                              evaluations. Also adept at accurately measuring
-                              and mapping land for construction projects and
-                              property boundaries
-                            </li>
-                            <li>
-                              Carefully planned and executed logistics
-                              strategies to boost efficiency and reduce
-                              downtime. This included assessing equipment needs,
-                              coordinating schedules with stakeholders, and
-                              setting up inventory systems. I also worked
-                              closely with the installation team to ensure
-                              smooth coordination between equipment and project
-                              timelines.
-                            </li>
-                          </ul>
+                      <div className="workContainer">
+                        <ul className="responsibilities">
+                          <li>
+                            Skilled with WordPress as a CMS, experienced in all
+                            development aspects, such as installation, theme and
+                            plugin management, custom feature development,
+                            performance and security optimization, and website
+                            maintenance and troubleshooting.
+                          </li>
+                          <li>
+                            Design a captivating landing page that effectively
+                            tells your brand&apos;s story, using the expertly
+                            crafted design by our talented web designer.
+                          </li>
+                          <li>
+                            Create a strong and efficient backend system for
+                            smooth email delivery, guaranteeing messages are
+                            sent to recipients quickly and dependably
+                          </li>
+                          <li>
+                            Use WooCommerce plugins to provide unique and
+                            tailored solutions for your online store, improving
+                            customer shopping experiences based on your business
+                            requirements.
+                          </li>
+                          <li>
+                            Performed quality assurance tests on various sites
+                            to ensure cross browser compatibility and mobile
+                            responsiveness.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="work">
+                      <div className="workContainer">
+                        <figure className="insysticLogo">
+                          <img src={InsysticLogo} alt="Insystic Logo" />
+                        </figure>
+                        <h2 className="textHeader ubuntu">
+                          Commissioning Engineer (<i>Team Leader</i>)
+                        </h2>
+                        <h3 className="company">
+                          <i>Insystic Corporation: Tipolo Mandaue City</i>
+                        </h3>
+                        <p className="date">March 2021 – January 2022</p>
+                        <div className="technologies">
+                          <section>
+                            <figure>
+                              <img src={HuaweiLogo} alt="Huawei Logo" />
+                            </figure>
+                          </section>
+                          <section>
+                            <figure>
+                              <img src={GlobeLogo} alt="Huawei Logo" />
+                            </figure>
+                          </section>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  </Swiper>
+                      <div className="workContainer">
+                        <ul className="responsibilities">
+                          <li>
+                            Efficiently install hardware and software components
+                            for equipment such as ATN 980C, ATN910C, MA5800, and
+                            GPONA devices, ensuring smooth integration into your
+                            network and optimal performance across operations.
+                          </li>
+                          <li>
+                            Thoroughly install and set up the network, including
+                            hardware and software, to create a reliable
+                            infrastructure. Configure settings, protocols,
+                            security, and access controls for smooth data
+                            transmission, connectivity, and management.
+                          </li>
+                          <li>
+                            Follow industry standards and best practices during
+                            installation and configuration to create a stable,
+                            high-performance network that meets your
+                            organization&apos;s needs.
+                          </li>
+                          <li>
+                            Performed thorough inspections on structures,
+                            evaluating their condition and compliance. Skilled
+                            in conducting surveys, defect analysis, energy
+                            efficiency assessments, and accessibility
+                            evaluations. Also adept at accurately measuring and
+                            mapping land for construction projects and property
+                            boundaries
+                          </li>
+                          <li>
+                            Carefully planned and executed logistics strategies
+                            to boost efficiency and reduce downtime. This
+                            included assessing equipment needs, coordinating
+                            schedules with stakeholders, and setting up
+                            inventory systems. I also worked closely with the
+                            installation team to ensure smooth coordination
+                            between equipment and project timelines.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="div4" className="section">
+          <div className="bgText">
+            <h2 className="anton">
+              <span>P</span>rojects
+            </h2>
+          </div>
+          <div className="tablecell">
+            <div className="container">
+              <div className="title">
+                <TypeWritereffect
+                  datatype={[
+                    "Projects and Experiments...",
+                    "Projects and Experiments...",
+                    "Projects and Experiments...",
+                  ]}
+                />
+              </div>
+              <div className="contents">
+                <div className="contain">
+                  <div className="component server">
+                    <div className="slot2"></div>
+                    <div className="slot2"></div>
+                    <div className="slot2"></div>
+                    <div className="slot2"></div>
+                    <div className="button"></div>
+                    <div className="button"></div>
+                  </div>
+                  <div className="component server">
+                    <div className="slot2"></div>
+                    <div className="slot2"></div>
+                    <div className="slot2"></div>
+                    <div className="slot2"></div>
+                    <div className="button"></div>
+                    <div className="button"></div>
+                  </div>
+                  <div className="component signals">
+                    <div id="load">
+                      <div>U</div>
+                      <div>P</div>
+                      <div>L</div>
+                      <div>O</div>
+                      <div>A</div>
+                      <div>D</div>
+                      <div>I</div>
+                      <div>N</div>
+                      <div>G</div>
+                    </div>
+                  </div>
+                  <div className="component PC">
+                    <div className="loading ">
+                      <div className="screen">
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                        <div className="shadow"></div>
+                        <div className="shadow"></div>
+                        <div className="shadow"></div>
+                        <span>Work in Progress</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="component server">
+                    <div className="slot"></div>
+                    <div className="slot"></div>
+                    <div className="button"></div>
+                    <div className="button"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="div4" className="section">
-            <div className="tablecell">
-              <div className="container">
-                <div className="title">
-                  <TypeWritereffect
-                    datatype={[
-                      "Projects and Experiments...",
-                      "Projects and Experiments...",
-                      "Projects and Experiments...",
-                    ]}
-                  />
-                </div>
-              </div>
-            </div>
+        </div>
+        <div id="div5" className="section">
+          <div className="bgText">
+            <h2 className="anton">
+              <span>C</span>ontact
+            </h2>
           </div>
-          <div id="div5" className="section">
-            <div className="tablecell">
-              <div className="container">
-                <div className="title">
-                  <TypeWritereffect
-                    datatype={[
-                      "Send me a Letter...",
-                      "Waiting for you email...",
-                    ]}
-                  />
-                </div>
-                <div className="contents">
-                  <div className="globe"></div>
-                  <div className="testContents">
+          <div className="tablecell">
+            <div className="container">
+              <div className="title">
+                <TypeWritereffect
+                  datatype={["Send me a Letter...", "Waiting for you email..."]}
+                />
+              </div>
+              <div className="contents">
+                <div className="globe"></div>
+                <div className="testContents">
+                  <div className="contacts">
                     <section>
-                      <p>
-                        <a
-                          href="mailto:fclaquio@gmail.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          fclaquio@gmail.com
-                        </a>
-                      </p>
-                      <p>
-                        <a
-                          href="https://www.linkedin.com/in/francis-cristopher-l-11b482203/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          in/francis-cristopher
-                        </a>
-                      </p>
-                      <p>
-                        <a
-                          href="https://github.com/Francis1a"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          github.com/Francis1a
-                        </a>
-                      </p>
+                      <figure>
+                        <img src={img1} alt="" />
+                      </figure>
+                      <a
+                        href="mailto:fclaquio@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        fclaquio@gmail.com
+                      </a>
+                    </section>
+                    <section>
+                      <figure>
+                        <img src={img2} alt="" />
+                      </figure>
+
+                      <a
+                        href="https://www.linkedin.com/in/francis-cristopher-l-11b482203/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        in/francis-cristopher
+                      </a>
+                    </section>
+                    <section>
+                      <figure>
+                        <img src={img3} alt="" />
+                      </figure>
+
+                      <a
+                        href="https://github.com/Francis1a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        github.com/Francis1a
+                      </a>
                     </section>
                   </div>
                 </div>
