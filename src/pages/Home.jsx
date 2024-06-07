@@ -402,12 +402,11 @@ function Home() {
                 />
               </div>
               <section>
-                <i>
-                  ANYONE WHO HAS NEVER MADE A MISTAKE HAS NEVER TRIED EVERYTHING
-                  NEW. <small>~Albert Einstien</small>
-                </i>
                 <p>
-                  This are my past experiences working in the corporate world.
+                  Here, I am excited to share the journey that has shaped my
+                  career, showcasing the diverse experiences and accomplishments
+                  that define who I am today. This serves as a testament to my
+                  growth and dedication.
                 </p>
               </section>
               <div className="workExperience">
@@ -579,6 +578,12 @@ function Home() {
                   </SwiperSlide>
                 </Swiper>
               </div>
+              <section>
+                <i>
+                  ANYONE WHO HAS NEVER MADE A MISTAKE HAS NEVER TRIED EVERYTHING
+                  NEW. <small>~Albert Einstien</small>
+                </i>
+              </section>
             </div>
           </div>
         </div>

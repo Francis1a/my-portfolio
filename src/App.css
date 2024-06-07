@@ -527,6 +527,10 @@ section#div3 section i {
   color: #fff;
 }
 
+#div2 section {
+  margin-bottom: 40px;
+}
+
 section#div3 section {
   width: 100%;
   margin: 5px auto 30px;
@@ -930,6 +934,19 @@ section#div3 section {
   text-align: center;
 }
 
+#div3 section {
+  width: 100%;
+  margin: 0 auto 30px;
+  max-width: 870px;
+}
+
+#div2 p{
+  margin: 0;
+}
+
+#div section{
+      margin-bottom: 30px;
+}
 
 @keyframes move {
   0% {
