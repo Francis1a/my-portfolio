@@ -18,7 +18,10 @@ function Nav() {
       </div>
       <nav className="navbar">
         <div className="contact">
-          <Link to="#contact">Send me a Letter</Link>
+          {/* <Link to="#contact" onClick={window.location.replace("#contact")}>
+            Send me a Letter
+          </Link> */}
+          <a href="#contact">Send me a Letter</a>
         </div>
         {/* <ul className="nav-list">
           <li className="nav-item">

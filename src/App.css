@@ -238,12 +238,13 @@ a.nav-links {
   margin: 0 auto;
   left: 0;
   width: calc(100% - 418px);
-  z-index: -1;
+  z-index: 0;
 }
 
 .icon1 svg {
   width: 85px;
   max-width: 100%;
+  margin: 0 auto;
 }
 
 .icon2 {
@@ -354,12 +355,12 @@ svg#Layer_1 {
   transform: rotate(10deg);
 }
 
-#div2{
+#skills{
   height: 100vh;
   width: 100%;
 
 }
-#div3{
+#experiences{
   height: 100vh;
   width: 100%;
 }
@@ -509,35 +510,35 @@ ul.responsibilities li {
   left: 75px;
   font-size: 25px;
 }
-section#div2 section p {
+section#skills section p {
   margin: 0;
   color: #ffffffad;
   font-size: 1rem;
 }
-section#div2 section i {
+section#skills section i {
   color: #fff;
 }
-section#div2 section {
+section#skills section {
   width: 100%;
   margin: 5px auto 30px;
   max-width: 750px;
 }
 
-section#div3 section p {
+section#experiences section p {
   margin: 0;
   color: #ffffffad;
   font-size: 1rem;
 }
 
-section#div3 section i {
+section#experiences section i {
   color: #fff;
 }
 
-#div2 section {
+#skills section {
   margin-bottom: 40px;
 }
 
-section#div3 section {
+section#experiences section {
   width: 100%;
   margin: 5px auto 30px;
   max-width: 750px;
@@ -572,24 +573,36 @@ section#div3 section {
   text-shadow: 5px 5px 5px #00000014;
 }
 
-.bgText .anton span {
+.bgText .anton .firstLetter {
   font-size: 570px;
+  position: relative;
 }
 
+.bgText span {
+  position: relative;
+}
+
+
+/* .bgText .anton .firstLetter{
+  font-size: 570px;
+  position: absolute;
+  bottom: 0;
+} */
+
 /* 
-#div3 .bgText .anton {
+#experiences .bgText .anton {
   font-size: 370px;
 }
 
-#div3 .bgText .anton span {
+#experiences .bgText .anton span {
   font-size: 429px;
 }
 
-#div4 .bgText .anton {
+#experiences .bgText .anton {
   font-size: 520px;
 }
 
-#div4 .bgText .anton span {
+#experiences .bgText .anton span {
   font-size: 740px;
 }
 
@@ -940,13 +953,13 @@ section#div3 section {
   text-align: center;
 }
 
-#div3 section {
+#experiences section {
   width: 100%;
   margin: 0 auto 30px;
   max-width: 870px;
 }
 
-#div2 p{
+#skills p{
   margin: 0;
 }
 

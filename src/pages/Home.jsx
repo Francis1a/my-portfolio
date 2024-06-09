@@ -1,7 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "../App.css";
-import Nav from "../components/Nav";
-import gsap, { Linear } from "gsap";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import "animate.css";
 import { motion } from "framer-motion";
 import MySvg from "../assets/SVG/sample1.svg?react";
@@ -80,6 +81,8 @@ function Home() {
 
   const isThrottled = useRef(false);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  gsap.registerPlugin(useGSAP);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -99,14 +102,63 @@ function Home() {
     };
   });
 
+  const handleButtonClick = () => {
+    setIsButtonClicked(true);
+    scrollToSection(4);
+  };
+
   const scrollToSection = (index) => {
-    const sections = ["#div1", "#div2", "#div3", "#div4", "#div5"];
-    if (index >= 0 && index <= sections.length - 1) {
+    const sections = [
+      "#home",
+      "#skills",
+      "#experiences",
+      "#projects",
+      "#contact",
+    ];
+    if ((index >= 0 && index <= sections.length - 1) || isButtonClicked) {
       setCurrentSectionIndex(index);
       console.log(index);
       console.log(sections[index]);
       //replace the link
       window.location.replace(sections[index]);
+      setIsButtonClicked(false);
+      gsap.to(".letter, .letter2, .letter3, .letter4", {
+        left: -320,
+        stagger: 0,
+        opacity: 0,
+      });
+    }
+    if (index == 1) {
+      gsap.to(".letter", { left: 0, delay: 0.5, opacity: 1, stagger: 0.1 });
+    } else {
+      gsap.to(".letter", { opacity: 0 });
+      gsap.to(".letter", { left: -320, stagger: 0 });
+    }
+
+    if (index == 2) {
+      gsap.to(".letter2", { left: 0, delay: 0.5, opacity: 1, stagger: 0.1 });
+    } else {
+      gsap.to(".letter2", { opacity: 0 });
+      gsap.to(".letter2", { left: -320, stagger: 0 });
+    }
+
+    if (index == 3) {
+      gsap.to(".letter3", { left: 0, delay: 0.5, opacity: 1, stagger: 0.1 });
+    } else {
+      gsap.to(".letter3", { opacity: 0 });
+      gsap.to(".letter3", { left: -320, stagger: 0 });
+    }
+
+    if (index == 4) {
+      gsap.to(".letter4", {
+        left: 0,
+        delay: 0.5,
+        opacity: 1,
+        stagger: 0.1,
+      });
+    } else {
+      gsap.to(".letter4", { opacity: 0 });
+      gsap.to(".letter4", { left: -320, stagger: 0 });
     }
   };
 
@@ -153,18 +205,30 @@ function Home() {
     return () => ctx.revert();
   }, []);
 
-  useEffect(() => {
-    gsap.to(logoRotation, 5, {
-      ease: Linear.easeNone,
-      duration: 99999,
+  useGSAP(() => {
+    gsap.to(logoRotation, {
+      duration: 4,
       rotation: 360,
+      ease: "none",
       repeat: -1,
     });
 
-    gsap.to(logoRotation2, 5, {
-      ease: Linear.easeNone,
-      duration: 99999,
+    gsap.to(logoRotation2, {
+      duration: 2,
       rotation: -360,
+      ease: "none",
+      repeat: -1,
+    });
+    gsap.to(".icon10", {
+      duration: 2,
+      rotation: 360,
+      ease: "none",
+      repeat: -1,
+    });
+    gsap.to(".icon8", {
+      duration: 5,
+      rotation: 360,
+      ease: "none",
       repeat: -1,
     });
   });
@@ -189,10 +253,51 @@ function Home() {
         }}
         exit={{ opacity: 0 }}
       >
-        <div id="div1" className="cover-page section">
+        <div id="home" className="cover-page section">
           <div className="wrapper">
             <div className="navigation">
-              <Nav />
+              <div className="hdr-logo">
+                <TypeWritereffect
+                  datatype={[
+                    "Hi! Im Francis",
+                    "I am Creative",
+                    "I Love Design",
+                    "I Love to Develop",
+                  ]}
+                />
+              </div>
+              <nav className="navbar">
+                <div className="contact">
+                  {/* <Link to="#contact" onClick={window.location.replace("#contact")}>
+            Send me a Letter
+          </Link> */}
+                  <a href="#contact" onClick={handleButtonClick}>
+                    Send me a Letter
+                  </a>
+                </div>
+                {/* <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/" className="nav-links">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-links">
+              About me
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/labotratory" className="nav-links">
+              Labs
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact" className="nav-links">
+              Message Me
+            </Link>
+          </li>
+        </ul> */}
+              </nav>
             </div>
           </div>
           <div className="banner-home">
@@ -215,7 +320,7 @@ function Home() {
                 <div className="icon3">
                   <MySvg3 />
                 </div>
-                <div className="icon4">
+                <div className="icon4 animate__animated animate__tada animate__infinite">
                   <MySvg4 />
                 </div>
                 <div className="icon5">
@@ -263,10 +368,15 @@ function Home() {
             </div>
           </div>
         </div>
-        <div id="div2" className="section">
+        <div id="skills" className="section">
           <div className="bgText">
             <h2 className="anton">
-              <span>S</span>kills
+              <span className="letter firstLetter">S</span>
+              <span className="letter ">k</span>
+              <span className="letter ">i</span>
+              <span className="letter ">l</span>
+              <span className="letter ">l</span>
+              <span className="letter ">s</span>
             </h2>
           </div>
           <div className="tablecell">
@@ -384,10 +494,20 @@ function Home() {
             </div>
           </div>
         </div>
-        <div id="div3" className="section">
+        <div id="experiences" className="section">
           <div className="bgText">
             <h2 className="anton">
-              <span>E</span>xperiences
+              <span className="letter2 firstLetter">E</span>
+              <span className="letter2 ">x</span>
+              <span className="letter2 ">p</span>
+              <span className="letter2 ">e</span>
+              <span className="letter2 ">r</span>
+              <span className="letter2 ">i</span>
+              <span className="letter2 ">e</span>
+              <span className="letter2 ">n</span>
+              <span className="letter2 ">c</span>
+              <span className="letter2 ">e</span>
+              <span className="letter2 ">s</span>
             </h2>
           </div>
           <div className="tablecell">
@@ -587,10 +707,17 @@ function Home() {
             </div>
           </div>
         </div>
-        <div id="div4" className="section">
+        <div id="projects" className="section">
           <div className="bgText">
             <h2 className="anton">
-              <span>P</span>rojects
+              <span className="letter3 firstLetter">P</span>
+              <span className="letter3">r</span>
+              <span className="letter3">o</span>
+              <span className="letter3">j</span>
+              <span className="letter3">e</span>
+              <span className="letter3">c</span>
+              <span className="letter3">t</span>
+              <span className="letter3">s</span>
             </h2>
           </div>
           <div className="tablecell">
@@ -659,10 +786,16 @@ function Home() {
             </div>
           </div>
         </div>
-        <div id="div5" className="section">
+        <div id="contact" className="section">
           <div className="bgText">
             <h2 className="anton">
-              <span>C</span>ontact
+              <span className="letter4 firstLetter">C</span>
+              <span className="letter4">o</span>
+              <span className="letter4">n</span>
+              <span className="letter4">t</span>
+              <span className="letter4">a</span>
+              <span className="letter4">c</span>
+              <span className="letter4">t</span>
             </h2>
           </div>
           <div className="tablecell">
