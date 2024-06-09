@@ -122,11 +122,13 @@ function Home() {
       //replace the link
       window.location.replace(sections[index]);
       setIsButtonClicked(false);
-      gsap.to(".letter, .letter2, .letter3, .letter4", {
-        left: -320,
-        stagger: 0,
-        opacity: 0,
-      });
+      if (index < 4) {
+        gsap.to(".letter, .letter2, .letter3, .letter4", {
+          left: -320,
+          stagger: 0,
+          opacity: 0,
+        });
+      }
     }
     if (index == 1) {
       gsap.to(".letter", { left: 0, delay: 0.5, opacity: 1, stagger: 0.1 });
