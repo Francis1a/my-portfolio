@@ -122,13 +122,11 @@ function Home() {
       //replace the link
       window.location.replace(sections[index]);
       setIsButtonClicked(false);
-      if (index < 4) {
-        gsap.to(".letter, .letter2, .letter3, .letter4", {
-          left: -320,
-          stagger: 0,
-          opacity: 0,
-        });
-      }
+      gsap.to(".letter, .letter2, .letter3, .letter4", {
+        left: -320,
+        stagger: 0,
+        opacity: 0,
+      });
     }
     if (index == 1) {
       gsap.to(".letter", { left: 0, delay: 0.5, opacity: 1, stagger: 0.1 });
@@ -151,7 +149,7 @@ function Home() {
       gsap.to(".letter3", { left: -320, stagger: 0 });
     }
 
-    if (index == 4) {
+    if (index == 4 || index == 5) {
       gsap.to(".letter4", {
         left: 0,
         delay: 0.5,
